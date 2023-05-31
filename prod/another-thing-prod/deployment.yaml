@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: another-thing-prod
+  name: another-thing-prod
+  namespace: another-thing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: another-thing-prod
+  template:
+    metadata:
+      labels:
+        app: another-thing-prod
+    spec:
+      containers:
+      - image: traefik/whoami
+        imagePullPolicy: Always
+        name: whoami
