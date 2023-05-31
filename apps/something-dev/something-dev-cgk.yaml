@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: something-dev-cgk
+  namespace: something
+spec:
+  project: default
+  source:
+    path: dev/something-dev
+    repoURL: https://github.com/faultables/animated-winner
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
