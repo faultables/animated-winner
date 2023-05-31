@@ -11,4 +11,6 @@ spec:
   destination:
     name: sin
     namespace: another-thing
-
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

@@ -11,3 +11,6 @@ spec:
   destination:
     name: hkg
     namespace: another-thing
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
