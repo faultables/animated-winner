@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vcluster-cgk
+  namespace: vcluster-cgk
+spec:
+  selector:
+    app: vcluster
+    release: cgk
+  ports:
+    - name: https
+      port: 443
+      targetPort: 8443
+      protocol: TCP
+  type: NodePort
