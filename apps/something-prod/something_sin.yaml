@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: something-prod-sin
   namespace: something
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
