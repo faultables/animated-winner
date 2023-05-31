@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: another-thing-prod-sin
+  namespace: another-thing
+spec:
+  project: default
+  source:
+    path: prod/another-thing-prod
+    repoURL: https://github.com/faultables/animated-winner
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: another-thing
+

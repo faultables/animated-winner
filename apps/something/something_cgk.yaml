@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: something-prod-cgk
+  namespace: something
+spec:
+  project: default
+  source:
+    path: prod/something-prod
+    repoURL: https://github.com/faultables/animated-winner
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
+
