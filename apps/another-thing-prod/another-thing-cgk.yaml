@@ -9,6 +9,6 @@ spec:
     path: prod/another-thing-prod
     repoURL: https://github.com/faultables/animated-winner
   destination:
-    server: "https://kubernetes.default.svc"
+    server: "cgk"
     namespace: another-thing
 
