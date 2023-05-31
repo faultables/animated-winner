@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: another-thing-prod-cgk
+  name: another-thing-prod-hkg
   namespace: argocd
 spec:
   project: default
@@ -9,6 +9,5 @@ spec:
     path: prod/another-thing-prod
     repoURL: https://github.com/faultables/animated-winner
   destination:
-    name: cgk
+    name: hkg
     namespace: another-thing
-
